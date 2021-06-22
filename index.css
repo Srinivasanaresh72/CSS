@@ -9,6 +9,10 @@ body{
     background-position:center;    
     font-family: sans-serif;
 }
+.main{
+    background: rgb(0,100,0);  
+    margin: 30px;  
+}
 .main ul{
     display: inline-flex;
     list-style:none;
@@ -23,12 +27,17 @@ body{
     text-decoration: none;
     color:#fff;
 }
+.html, .main ul li:hover{
+    background:#2bab0d;
+    border-radius:3px;
+}
 .sub{
     display:none;
 }
 .main ul li:hover .sub{
     display:block;
     position:absolute;
+    background:rgb(0,100,0);
     margin-top:15px;
     margin-left:-15px;
 }
