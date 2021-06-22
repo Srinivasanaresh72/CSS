@@ -9,18 +9,44 @@ body{
     background-position:center;    
     font-family: sans-serif;
 }
-.main{
-    background: rgb(0,100,0);
-    text-align:center;
-    
-}
 .main ul{
     display: inline-flex;
     list-style:none;
     color:#fff;
 }
 .main ul li{
-    width:120px;
+    width:200px;
     margin:15px;
     padding:15px;
+}
+.main ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.sub{
+    display:none;
+}
+.main ul li:hover .sub{
+    display:block;
+    position:absolute;
+    margin-top:15px;
+    margin-left:-15px;
+}
+.main ul li:hover .sub ul{
+    display:block;
+    margin:10px;
+}
+.main ul li:hover .sub ul li{
+    width:150px;
+    padding:10px;
+    border-bottom: 1px dotted #fff;
+    background:transparent;
+    border-radius:0;
+    text-align:left;
+}
+.main ul li:hover .sub ul li:last-child{
+    border-bottom:none;
+}
+.main ul li:hover .sub ul li a:hover{
+    color:#b2ff00;
 }
