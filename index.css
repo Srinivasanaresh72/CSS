@@ -10,13 +10,13 @@ body{
     font-family: sans-serif;
 }
 .main{
-    background: rgb(0,100,0);  
+    background: #A9A9A9;  
     margin: 30px;  
 }
 .main ul{
-    display: inline-flex;
+    display:inline-flex;
     list-style:none;
-    color:#fff;
+    color:#0000CD;
 }
 .main ul li{
     width:200px;
@@ -25,11 +25,11 @@ body{
 }
 .main ul li a{
     text-decoration: none;
-    color:#fff;
+    color:#0000CD;
 }
-.html, .main ul li:hover{
-    background:#2bab0d;
-    border-radius:3px;
+.main ul li:hover{
+    color:#6A5ACD;
+    cursor: pointer;
 }
 .sub{
     display:none;
@@ -37,7 +37,7 @@ body{
 .main ul li:hover .sub{
     display:block;
     position:absolute;
-    background:rgb(0,100,0);
+    color:rgb(0,100,0);
     margin-top:15px;
     margin-left:-15px;
 }
@@ -48,8 +48,7 @@ body{
 .main ul li:hover .sub ul li{
     width:150px;
     padding:10px;
-    border-bottom: 1px dotted #fff;
-    background:transparent;
+    border-bottom: 3px solid #BA55D3;
     border-radius:0;
     text-align:left;
 }
