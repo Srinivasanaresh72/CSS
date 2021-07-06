@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(http://getwallpapers.com/wallpaper/full/3/3/4/490956.jpg);
-    background-size: cover;
-    background-position:center;    
+    background:black;   
     font-family: sans-serif;
 }
 .main{
@@ -16,7 +14,7 @@ body{
 .main ul{
     display:inline-flex;
     list-style:none;
-    color:#0000CD;
+    color:#fff;
 }
 .main ul li{
     width:200px;
@@ -25,7 +23,7 @@ body{
 }
 .main ul li a{
     text-decoration: none;
-    color:#0000CD;
+    color:#fff;
 }
 .main ul li:hover{
     color:#6A5ACD;
