@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> For Each Loop Example </title>
+    </head>
+    <body>
+        <h1>
+            COUNTRIES
+        </h1>
+        <h2 id="con">
+
+        </h2><br />
+        <h1>
+            CARS
+        </h1>
+        <h2 id="car">
+
+        </h2>
+    </body>
+    <script>
+        var countries = ["India", "China", "Pakisthan", "Srilanka", "Afghanisthan"];
+        countries.forEach(Function1);
+        function Function1(item, index)
+        {
+            document.getElementById("con").innerHTML += item +"<br>";
+        }
+        var cars = ["BMW", "Honda", "Benz", "Ferari", "Suzuki"];
+        cars.forEach(Function2);
+        function Function2(item, index)
+        {
+            document.getElementById("car").innerHTML += item +"<br />";
+        }
+    </script>
+</html>
