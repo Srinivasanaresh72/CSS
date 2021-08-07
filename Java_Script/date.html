@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> JS Dates Example </title>
+    </head>
+    <body>
+        <h1 id="date">
+
+        </h1>
+    </body>
+    <script>
+        var d = new Date();
+        document.write("<br /><h1>"+d+"</h1><br />");
+
+        var d1 = new Date("2020-03-20");
+        document.write("<h1>"+d1+"</h1><br />");
+
+        document.write("<h1>"+d.getDate()+"</h1><br />");
+
+        document.write("<h1>"+d.getDay()+"</h1><br />");
+        
+        var day = d.getDay();
+
+        if(day==6)
+        {
+            document.write("<h1> Its a Saturday </h1>");
+        }
+
+        var date = d.getDate();
+        var month = d.getMonth()+1;
+        var year = d.getFullYear();
+        document.getElementById("date").innerHTML = "Today's Date is: " +date+ "/" +month+ "/" +year;
+    </script>
+</html>
