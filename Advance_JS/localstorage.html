@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title> JS Local Storage Example </title> 
+    </head>
+    <body>
+
+    </body>
+    <script>
+        let firstname;
+        let lastname;
+
+        localStorage.setItem("firstname","Lanka");
+        localStorage.setItem("lastname","Naresh");
+
+        firstname = localStorage.getItem("firstname");
+        lastname = localStorage.getItem("lastname");
+
+        document.write("<h1>" +firstname + "</h1> <br />");
+        document.write("<h1>" +lastname + "</h1> <br />");
+    </script>
+</html>
