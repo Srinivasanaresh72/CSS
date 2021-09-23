@@ -7,7 +7,8 @@ export default class AppBody extends Component{
         this.state = {
 
             'FirstName':'',
-            'LastName':''
+            'LastName':'',
+            'result':''
 
         }
     }
@@ -27,6 +28,16 @@ export default class AppBody extends Component{
 
     }
 
+    onSubmit = (e) => {
+
+        const result = parseInt(this.state.FirstName) + parseFloat(this.state.LastName);
+        this.setState({
+
+            result: result
+        })
+
+    }
+
     render(){
 
      
@@ -35,7 +46,9 @@ export default class AppBody extends Component{
             <div>
                 <input name = "FirstName" type="text" onChange={this.handleInputChange} value = {this.state.FirstName} placeholder = "enter FirstName" /> <br />
                 <input name = "LastName" type="text" onChange={this.handleInputChange} value = {this.state.LastName} placeholder = "enter LastName" /> <br />
-                <button> Submit </button>
+                <button onClick = {this.onSubmit}> Submit </button> <br /><br />
+                <h4> {this.state.FirstName} {this.state.LastName} </h4> <br /><br />
+                <h4> {this.state.result} </h4>
             </div>
 
         )
