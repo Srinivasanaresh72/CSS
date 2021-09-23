@@ -2,15 +2,24 @@ import React,{Component} from 'react'
 
 export default class AppBody extends Component{
 
-    render(){
+    constructor(props){
+        super(props);
+        this.state = {
 
-        return(
+            'FirstName':'Lanka',
+            'LastName':'Naresh'
 
-            <p> This is React Js App </p>
-        )
+        }
     }
 
+    render(){
 
+     
+        return(
 
+            <p> My Name is {this.state.FirstName} {this.state.LastName} </p>
+
+        )
+    }
 
 }
