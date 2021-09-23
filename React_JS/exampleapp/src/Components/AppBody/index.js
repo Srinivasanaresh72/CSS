@@ -6,10 +6,25 @@ export default class AppBody extends Component{
         super(props);
         this.state = {
 
-            'FirstName':'Lanka',
-            'LastName':'Naresh'
+            'FirstName':'',
+            'LastName':''
 
         }
+    }
+    handleInputChange = (e) =>{
+
+        const target = e.target;
+        const name = target.name;
+        const value = target.value;
+        this.setState({
+
+            [name]: value
+
+        })
+        console.log(this.state.FirstName);
+        console.log(this.state.LastName);
+
+
     }
 
     render(){
@@ -17,7 +32,11 @@ export default class AppBody extends Component{
      
         return(
 
-            <p> My Name is {this.state.FirstName} {this.state.LastName} </p>
+            <div>
+                <input name = "FirstName" type="text" onChange={this.handleInputChange} value = {this.state.FirstName} placeholder = "enter FirstName" /> <br />
+                <input name = "LastName" type="text" onChange={this.handleInputChange} value = {this.state.LastName} placeholder = "enter LastName" /> <br />
+                <button> Submit </button>
+            </div>
 
         )
     }
