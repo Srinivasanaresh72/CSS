@@ -44,8 +44,8 @@ export default class AppBody extends Component{
         return(
 
             <div>
-                <input name = "FirstName" type="text" onChange={this.handleInputChange} value = {this.state.FirstName} placeholder = "enter FirstName" /> <br />
-                <input name = "LastName" type="text" onChange={this.handleInputChange} value = {this.state.LastName} placeholder = "enter LastName" /> <br />
+                <input name = "FirstName" type="text" onChange={this.handleInputChange} value = {this.state.FirstName} placeholder = "enter First Name" /> <br />
+                <input name = "LastName" type="text" onChange={this.handleInputChange} value = {this.state.LastName} placeholder = "enter Last Name" /> <br />
                 <button onClick = {this.onSubmit}> Submit </button> <br /><br />
                 <h4> {this.state.FirstName} {this.state.LastName} </h4> <br /><br />
                 <h4> {this.state.result} </h4>
