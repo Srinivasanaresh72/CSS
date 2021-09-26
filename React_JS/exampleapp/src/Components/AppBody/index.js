@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import './index.css'
 
 export default class AppBody extends Component{
 
@@ -43,12 +44,17 @@ export default class AppBody extends Component{
      
         return(
 
-            <div>
-                <input name = "FirstName" type="text" onChange={this.handleInputChange} value = {this.state.FirstName} placeholder = "enter First Name" /> <br />
-                <input name = "LastName" type="text" onChange={this.handleInputChange} value = {this.state.LastName} placeholder = "enter Last Name" /> <br />
-                <button onClick = {this.onSubmit}> Submit </button> <br /><br />
-                <h4> {this.state.FirstName} {this.state.LastName} </h4> <br /><br />
-                <h4> {this.state.result} </h4>
+            <div className="AppBody">
+                <input className="input" name = "FirstName" type="text" onChange={this.handleInputChange} value = {this.state.FirstName} placeholder = "enter First Name" /> <br />
+                <input className="input" name = "LastName" type="text" onChange={this.handleInputChange} value = {this.state.LastName} placeholder = "enter Last Name" /> <br />
+                <div className="submitContainer">
+                     <button className="submit"onClick = {this.onSubmit}> Submit </button> <br /><br />
+                </div>
+                <div className="resultContainer">
+                <h4 className="result1"> {this.state.FirstName} {this.state.LastName} </h4> <br /><br />
+                <h4 className="result2"> {this.state.result} </h4>
+                </div>
+                
             </div>
 
         )
