@@ -7,15 +7,33 @@ export default class AppBody extends Component{
         super(props);
         this.state = {
 
-            'firstname' : 'Lanka',
-            'lastname' : 'Naresh'
+            'firstname' : '',
+            'lastname' : ''
 
         }
     }
 
+    handleInputChange = (e) =>{
+
+        const target = e.target;
+        const name = target.name;
+        const value = target.value;
+        this.setState({
+
+            [name] : value
+        })
+        console.log(this.state.firstname);
+        console.log(this.state.lastname);
+    }
+
     render(){
         return(
-            <p> My Name is {this.state.firstname} {this.state.lastname} </p>
+            
+            <div>
+                <input type="text" name = "firstname" onChange = {this.handleInputChange} value = {this.state.firstname} placeholder = "Enter First Name" /> <br />
+                <input type="text" name = "lastname" onChange = {this.handleInputChange} value = {this.statelastname} placeholder = "Enter Last Name" /> <br />
+                <button> Submit </button>
+            </div>
         )
     }
 }
