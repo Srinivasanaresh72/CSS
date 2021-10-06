@@ -8,7 +8,8 @@ export default class AppBody extends Component{
         this.state = {
 
             'firstname' : '',
-            'lastname' : ''
+            'lastname' : '',
+            'result' : ''
 
         }
     }
@@ -26,13 +27,24 @@ export default class AppBody extends Component{
         console.log(this.state.lastname);
     }
 
+    onSubmit = (e) => {
+
+        const result = parseInt(this.state.firstname) + parseInt(this.state.lastname);
+        this.setState({
+
+            result: result
+        })
+    }
+
     render(){
         return(
             
             <div>
                 <input type="text" name = "firstname" onChange = {this.handleInputChange} value = {this.state.firstname} placeholder = "Enter First Name" /> <br />
-                <input type="text" name = "lastname" onChange = {this.handleInputChange} value = {this.statelastname} placeholder = "Enter Last Name" /> <br />
-                <button> Submit </button>
+                <input type="text" name = "lastname" onChange = {this.handleInputChange} value = {this.state.lastname} placeholder = "Enter Last Name" /> <br />
+                <button onClick = {this.onSubmit} > Submit </button> <br/><br />
+                <h4> {this.state.firstname} {this.state.lastname} </h4> <br /><br />
+                <h4> {this.state.result} </h4>
             </div>
         )
     }
