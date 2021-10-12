@@ -5,15 +5,20 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Photos from './Components/Photos';
 import App from './App'
+import Navigation from './Components/Navigation';
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/" exact component={App} />
-      <Route path="/about" exact component={About} />
-      <Route path="/contact" exact component={Contact} />
-      <Route path="/photos" exact component={Photos} />
-    </Switch>
+    <div>
+      <Navigation />
+      <Switch>
+         <Route path="/" exact component={App} />
+         <Route path="/about" exact component={About} />
+         <Route path="/contact" exact component={Contact} />
+         <Route path="/photos" exact component={Photos} />
+         </Switch>
+    </div>
+    
   );
 }
 
