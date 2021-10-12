@@ -1,0 +1,18 @@
+ul{
+    list-style-type:none;
+    width:100%;
+    background:lightseagreen;
+    height:30%;
+}
+
+li{
+    display:inline;
+    margin:5px;
+    padding:5px;
+}
+
+.link{
+    color:black;
+    text-decoration:none;
+}
+
