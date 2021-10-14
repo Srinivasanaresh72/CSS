@@ -6,7 +6,7 @@ export default class Navigation extends Component{
     render(){
 
         return(
-            <div>  
+            <div className="navigation">  
                 <h1> Welcome to Cricket Sports Club </h1>          
                 <ul>
                     <li> <Link className="link" to='/' > Home </Link> </li>

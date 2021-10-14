@@ -1,3 +1,4 @@
+import React, {Component} from 'react'
 import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
@@ -6,20 +7,60 @@ import Contact from './Components/Contact';
 import Players from './Components/Players';
 import App from './App'
 import Navigation from './Components/Navigation';
+import PlayerContainer from './Containers/PlayerContainers';
 
-function Router() {
-  return (
-    <div>
-      <Navigation />
-      <Switch>
-         <Route path="/" exact component={App} />
-         <Route path="/about" exact component={About} />
-         <Route path="/contact" exact component={Contact} />
-         <Route path="/players" exact component={Players} />
-         </Switch>
-    </div>
-    
-  );
+class Router extends Component{
+
+  state = {
+
+    Players:[
+      {
+        'id':1,
+        'name':'MS_Dhoni',
+        'image':'MS_Dhoni.jpg'
+      },
+
+      {
+        'id':2,
+        'name':'Virat_Kohli',
+        'image':'Virat_Kohli.jpg'
+      },
+
+      {
+        'id':3,
+        'name':'Rohit_Sharma',
+        'image':'Rohit_Sharma.jpg'
+      },
+
+      {
+        'id':4,
+        'name':'Bumrah',
+        'image':'Bumrah.jpg'
+      },
+
+      {
+        'id':5,
+        'name':'KL_Rahul',
+        'image':'KL_Rahul.jpg'
+      }
+    ]
+  }
+  render(){
+    return (
+      <div>
+        <Navigation />
+        <Switch>
+           <Route exact path="/" component={App} />
+           <Route exact path="/about" component={About} />
+           <Route exact path="/contact"  component={Contact} />
+           <Route exact path="/players" render={(props) => <Players {...props} players={this.state.Players} />} />
+           <Route exact path = "players/:id/:name/:image" render={PlayerContainer} />
+           </Switch>
+      </div>
+      
+    );
+  }
+  
 }
 
 export default Router;

@@ -1,10 +1,26 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+export default function Players(props){
 
-export default function Players(){
+    const renderPlayers = () => {
+
+        return props.players.map((player) => (
+
+            <li> <Link to={ "/players/" +player.id+ "/" +player.name+ "/" +player.image}> {player.name} </Link> </li>
+
+        ))
+
+    }
 
     return(
 
-        <h1> Our Top Players </h1>
+        <div>
+            <h1> Our Top Players </h1>
+            <ul>
+            {renderPlayers()}
+            </ul>
+
+        </div>
 
     )
     
