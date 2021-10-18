@@ -7,7 +7,7 @@ import Contact from './Components/Contact';
 import Players from './Components/Players';
 import App from './App'
 import Navigation from './Components/Navigation';
-import PlayerContainer from './Containers/PlayerContainers';
+import PlayerContainer from './Containers/PlayerContainer';
 
 class Router extends Component{
 
@@ -54,7 +54,7 @@ class Router extends Component{
            <Route exact path="/about" component={About} />
            <Route exact path="/contact"  component={Contact} />
            <Route exact path="/players" render={(props) => <Players {...props} players={this.state.Players} />} />
-           <Route exact path = "players/:id/:name/:image" render={PlayerContainer} />
+           <Route exact path = "/players/:id/:name/:image" render={PlayerContainer} />
            </Switch>
       </div>
       
