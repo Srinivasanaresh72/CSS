@@ -6,8 +6,8 @@ import CreateUser from './Components/CreateUser';
 function App() {
   return (
     <div className="App">
-      {/*<Userslist />*/}
-      <CreateUser />
+      <Userslist />
+      {/*<CreateUser />*/}
     </div>
   );
 }

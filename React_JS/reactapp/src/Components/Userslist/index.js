@@ -24,6 +24,18 @@ export default class Userslist extends Component{
 
     }
 
+    deleteUser = (e) =>{
+
+        e.preventDefault();
+        const id=e.target.id;
+        axios.delete('http://localhost:3004/users/'+id)
+        .then(res => {
+
+            console.log(res.data);
+            
+        })
+    }
+
     render(){
 
         return(
@@ -33,7 +45,10 @@ export default class Userslist extends Component{
             <h1> List of Users </h1>
             {this.state.users.map((user) => (
 
-                <li id={user.id}> {user.name} </li>
+                <div>
+                    <li id={user.id}> {user.name} </li>
+                    <button id={user.id} onClick={this.deleteUser}> Delete </button>
+                </div>
                 
                 ))}
             </div>

@@ -19,8 +19,8 @@ export default class CreateUser extends Component{
     }
     saveUser = (e) => {
         e.preventDefault();
-        const user = this.state.user;
-        axios.post('http://localhost:3004/users',{user})
+        const name = this.state.user;
+        axios.post('http://localhost:3004/users',{name})
         .then(res => {
 
             console.log(res.data);
