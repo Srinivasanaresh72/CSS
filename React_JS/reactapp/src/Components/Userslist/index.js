@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 export default class Userslist extends Component{
 
     state = {
@@ -47,6 +48,7 @@ export default class Userslist extends Component{
 
                 <div>
                     <li id={user.id}> {user.name} </li>
+                    <Link to={'/edituser/'+user.id+'/'+user.name}> Edit </Link>
                     <button id={user.id} onClick={this.deleteUser}> Delete </button>
                 </div>
                 
