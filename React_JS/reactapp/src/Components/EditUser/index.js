@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React,{Component} from 'react'
+import './index.css'
 export default class EditUser extends Component{
 
     constructor(props){
@@ -26,6 +27,11 @@ export default class EditUser extends Component{
         .then(res => {
 
             console.log(res.data)
+            setTimeout(()=>{
+
+                window.location.replace('/');
+
+            },500)
         })
     }
 
@@ -37,7 +43,7 @@ export default class EditUser extends Component{
                 <h1> Edit User Details: </h1>
                 <input type="text" value={this.state.id} disabled />
                 <input name="name" type="text" onChange={this.handleInputChange} value={this.state.name} />
-                <button onClick={this.updateUser}> Submit </button>
+                <button className="button" onClick={this.updateUser}> Submit </button>
             </div>
         )
     }

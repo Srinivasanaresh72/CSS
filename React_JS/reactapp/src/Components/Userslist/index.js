@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import './index.css'
 export default class Userslist extends Component{
 
     state = {
@@ -33,6 +34,11 @@ export default class Userslist extends Component{
         .then(res => {
 
             console.log(res.data);
+            setTimeout(()=>{
+
+                window.location.replace('/')
+
+            },500)
             
         })
     }
@@ -41,14 +47,14 @@ export default class Userslist extends Component{
 
         return(
 
-            <div>
+            <div className="userslist">
 
             <h1> List of Users </h1>
             {this.state.users.map((user) => (
 
-                <div>
+                <div className="item">
                     <li id={user.id}> {user.name} </li>
-                    <Link to={'/edituser/'+user.id+'/'+user.name}> Edit </Link>
+                    <Link className="link" to={'/edituser/'+user.id+'/'+user.name}> Edit </Link>
                     <button id={user.id} onClick={this.deleteUser}> Delete </button>
                 </div>
                 

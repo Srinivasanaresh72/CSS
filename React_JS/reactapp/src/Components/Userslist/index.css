@@ -1,0 +1,36 @@
+.userslist{
+
+    margin:10px;
+    padding:10px;
+
+}
+.item{
+
+    margin:10px;
+    padding:10px;
+    display:flex;
+
+}
+.item li,button{
+
+    padding:10px;
+    margin:10px;
+}
+.link{
+
+    margin:10px;
+    padding:10px;
+}
+.link:hover{
+    background:lightgreen;
+    cursor:pointer;
+}
+.item li:hover{
+    background:lightblue;
+    cursor:pointer;
+}
+.item button:hover{
+    background:lightsalmon;
+    cursor:pointer;
+
+}

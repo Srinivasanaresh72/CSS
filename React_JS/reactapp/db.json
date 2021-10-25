@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name": "L.NARESH"
+      "name": "Lanka Naresh"
     },
     {
       "id": 2,
@@ -11,6 +11,10 @@
     {
       "name": "Kamal Hasan",
       "id": 3
+    },
+    {
+      "name": "RAHUL",
+      "id": 4
     }
   ]
 }

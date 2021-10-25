@@ -1,0 +1,19 @@
+.navigation{
+
+    background:lightcoral;
+    width:100%;
+}
+
+.navigation li{
+
+    display:inline-block;
+    text-decoration:none;
+    margin:10px;
+    padding:10px;
+
+}
+.link{
+
+    text-decoration:none;
+    color:black;
+}

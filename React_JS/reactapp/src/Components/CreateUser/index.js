@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import './index.css'
 export default class CreateUser extends Component{
 
     state = {
@@ -24,6 +25,11 @@ export default class CreateUser extends Component{
         .then(res => {
 
             console.log(res.data);
+            setTimeout(()=>{
+
+                window.location.replace('/');
+
+            },500)
         })
     }
 
@@ -33,7 +39,7 @@ export default class CreateUser extends Component{
 
             <div>
                 <input name="user" onChange={this.handleInputChange} type="text" placeholder="Enter Username" />
-                <button onClick={this.saveUser}> Submit </button>
+                <button className="button" onClick={this.saveUser}> Submit </button>
             </div>
         )
     }
