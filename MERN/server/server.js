@@ -1,9 +1,21 @@
 const express = require('express')
 const app = express()
 
-app.get((req,res)=>{
+app.get('/',(req,res)=>{
 
     res.send('<h1> Welcome to Express Server </h1>')
+})
+
+app.get('/about',(req,res)=>{
+
+    res.send('<h1> Welcome to About Page </h1>')
+
+})
+
+app.get('/users/:id',(req,res)=>{
+
+    const id = req.params.id
+    res.send('<h2>'+'Welcome User '+req.params.id+'</h2>')
 })
 
 
